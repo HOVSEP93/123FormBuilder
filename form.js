@@ -1,9 +1,11 @@
-// Get the value from the field with ID 111480518
-var fieldValue = parseFloat(document.getElementById("111997141").textContent);
+function roundResult() {
+  var result1 = loader.engine.document
+    .getElementById(111480518)
+    .getProperty("value.value");
+  var roundedValue1 = +(Math.round(result1 * 100) / 100).toFixed(2);
+  loader.engine.document
+    .getElementById(111480518)
+    .setValue({ value: roundedValue1 });
+}
 
-// Round the field value to two decimal places using Math.round()
-var roundedValue = Math.round(fieldValue * 100) / 100;
-
-// Display the rounded value
-console.log("Original Value: " + fieldValue);
-console.log("Rounded Value: " + roundedValue);
+window.onclick = roundResult;
