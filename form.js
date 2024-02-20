@@ -8,4 +8,4 @@ function roundResult() {
     .setValue({ value: roundedValue1 });
 }
 
-window.onclick = roundResult;
+window.onchange = roundResult;
