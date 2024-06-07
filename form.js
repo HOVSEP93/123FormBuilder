@@ -1,11 +1,15 @@
 function roundResult() {
-  var result1 = loader.engine.document
-    .getElementById(111480518)
+  const result1 = loader.engine.document
+    .getElementById(113552407)
     .getProperty("value.value");
-  var roundedValue1 = +(Math.round(result1 * 100) / 100).toFixed(2);
+  const roundedValue1 = +(Math.round(result1 * 100) / 100).toFixed(2);
   loader.engine.document
-    .getElementById(111480518)
+    .getElementById(113552407)
     .setValue({ value: roundedValue1 });
+
+  loader.engine.document
+    .getElementById(113552405)
+    .addEventListener("click", roundResult);
 }
 
-roundResult()
+window.onclick = roundResult;
